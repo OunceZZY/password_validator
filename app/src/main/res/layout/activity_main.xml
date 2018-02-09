@@ -6,13 +6,40 @@
     android:layout_height="match_parent"
     tools:context="zhiyuanzhang.password_validator.MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/inputText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="password"
+        app:layout_constraintBottom_toTopOf="@+id/validButton"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/validButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="312dp"
+        android:onClick="validate"
+        android:text="@string/validate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="240dp"
+        android:text="StrengthTest"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
